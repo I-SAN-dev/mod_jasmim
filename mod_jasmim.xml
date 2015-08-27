@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client="site">
+    <name>JASMIM - just another social media integration module</name>
+    <author>I-SAN.de Webdesign &amp; Hosting GbR</author>
+    <version>3.0 - j2.5/3.0</version>
+	<creationDate>07.02.2013</creationDate>
+    <description>JASMIMDESC</description>
+    <files>
+        <filename>mod_jasmim.xml</filename>
+        <filename module="mod_jasmim">mod_jasmim.php</filename>
+        <filename>index.html</filename>
+		    <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		    <filename>css/jasmim.css</filename>
+    </files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.mod_jasmim.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_jasmim.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_jasmim.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_jasmim.sys.ini</language>
+	</languages>
+    <config>
+	<fields name="params">
+	<fieldset name="basic">
+	<!--Global Parameters-->
+	    <field name="moduleclass_sfx" type="text" default=""
+           label="MODULECLASSSUFFIX"
+           description="MODULECLASSSUFFIXDESC" />
+		<field name="language" type="list" default="en"
+			label="FRONTENDLANGUAGE"
+			description="FRONTENDLANGUAGEDESC">
+			<option value="en">English</option>
+			<option value="de">Deutsch</option>
+			<option value="fr">Francais</option>
+			<option value="it">Italiano</option>
+			<option value="es">Espanol</option>
+			<option value="ko">Korean</option>
+			<option value="ja">Japanese</option>
+		</field>
+		<field type="spacer" name="spacer1" hr="true" />
+	<!--Quickmode Parameters-->
+		<field name="quickmode" type="radio" default="0"
+			label="Quickmode"
+			description="QUICKMODEDESC">
+				<option value="0">QUICKMODEOPT1</option>
+				<option value="1">QUICKMODEOPT2</option>
+				<option value="2">QUICKMODEOPT3</option>
+		</field>
+  </fieldset>
+  <fielset name="Facebook">
+		<field type="spacer" name="spacer22" hr="true" />
+		<field type="spacer" name="spacer2" label="&lt;b&gt;Likebutton Homepage&lt;/b&gt;" />
+	<!--Likebutton Homepage-->
+		<field name="like_homepage" type="radio" default="1"
+			label="HOMEPAGELIKEBUTTON"
+      class="btn-group btn-group-yesno"
+			description="HOMEPAGELIKEBUTTONDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="like_homepage_action" type="radio" default="like"
+			label="ACTION"
+			description="ACTIONDESC">
+				<option value="like">ACTION_LIKE</option>
+				<option value="recommend">ACTION_RECOMMEND</option>
+		</field>
+		<field name="like_homepage_layout" type="radio" default="button_count"
+			label="LAYOUT"
+			description="LAYOUTDESC">
+				<option value="button_count">OPT_SMALL</option>
+				<option value="box_count">OPT_BIG</option>
+				<option value="standard">OPT_STANDARD</option>
+		</field>
+		<field name="like_homepage_send" type="radio" default="fals"
+			label="SENDBUTTON"
+      class="btn-group btn-group-yesno"
+			description="SENDBUTTONDESC">
+				<option value="fals">OPT_NO</option>
+				<option value="tru">OPT_YES</option>
+		</field>
+		<field type="spacer" name="spacer33" hr="true" />
+		<field type="spacer" name="spacer3" label="&lt;b&gt;Likebutton Current Page&lt;/b&gt;" />
+	<!--Likebutton Current Page-->
+		<field name="like_current" type="radio" default="0"
+			label="CURRENTLIKEBUTTON"
+      class="btn-group btn-group-yesno"
+			description="CURRENTLIKEBUTTONDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="like_current_action" type="radio" default="like"
+			label="ACTION"
+			description="ACTIONDESC">
+				<option value="like">ACTION_LIKE</option>
+				<option value="recommend">ACTION_RECOMMEND</option>
+		</field>
+		<field name="like_current_layout" type="radio" default="button_count"
+			label="LAYOUT"
+			description="LAYOUTDESC">
+				<option value="button_count">OPT_SMALL</option>
+				<option value="box_count">OPT_BIG</option>
+				<option value="standard">OPT_STANDARD</option>
+		</field>
+		<field name="like_current_send" type="radio" default="fals"
+			label="SENDBUTTON"
+      class="btn-group btn-group-yesno"
+			description="SENDBUTTONDESC">
+				<option value="fals">OPT_NO</option>
+				<option value="tru">OPT_YES</option>
+		</field>
+		<field type="spacer" name="spacer44" hr="true" />
+		<field type="spacer" name="spacer4" label="&lt;b&gt;Likebutton Facebookpage&lt;/b&gt;" />
+	<!--Likebutton Facebookpage-->
+		<field name="like_fb" type="radio" default="0"
+			label="FBLIKEBUTTON"
+      class="btn-group btn-group-yesno"
+			description="FBLIKEBUTTONDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="like_fb_action" type="radio" default="like"
+			label="ACTION"
+			description="ACTIONDESC">
+				<option value="like">ACTION_LIKE</option>
+				<option value="recommend">ACTION_RECOMMEND</option>
+		</field>
+		<field name="like_fb_layout" type="radio" default="button_count"
+			label="LAYOUT"
+			description="LAYOUTDESC">
+				<option value="button_count">OPT_SMALL</option>
+				<option value="box_count">OPT_BIG</option>
+				<option value="standard">OPT_STANDARD</option>
+		</field>
+		<field name="like_fb_send" type="radio" default="fals"
+			label="SENDBUTTON"
+      class="btn-group btn-group-yesno"
+			description="SENDBUTTONDESC">
+				<option value="fals">OPT_NO</option>
+				<option value="tru">OPT_YES</option>
+		</field>
+		<field name="like_fb_href" type="text" default=""
+			label="URLTOLIKE"
+			description="URLTOLIKEDESC" />
+		<field type="spacer" name="spacer55" hr="true" />
+  </fieldset>
+  <fieldset name="Google +">
+		<field type="spacer" name="spacer5" label="&lt;b&gt;Plusonebutton Homepage&lt;/b&gt;" />
+	<!--Plusonebutton Homepage-->
+		<field name="plusone_homepage" type="radio" default="0"
+			label="HOMEPAGEPLUSONE"
+      class="btn-group btn-group-yesno"
+			description="HOMEPAGEPLUSONEDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="plusone_homepage_layout" type="radio" default="standard"
+			label="SIZE"
+			description="SIZEDESC">
+				<option value="small">OPT_SMALL</option>
+				<option value="medium">OPT_MEDIUM</option>
+				<option value="standard">OPT_STANDARD</option>
+				<option value="tall">OPT_TALL</option>
+		</field>
+		<field name="plusone_homepage_count" type="radio" default="fals"
+			label="PLUSONECOUNT"
+      class="btn-group btn-group-yesno"
+			description="PLUSONECOUNTDESC">
+				<option value="tru">OPT_YES</option>
+				<option value="fals">OPT_NO</option>
+		</field>
+		<field type="spacer" name="spacer66" hr="true" />
+		<field type="spacer" name="spacer6" label="&lt;b&gt;Plusonebutton Current Page&lt;/b&gt;" />
+	<!--Plusonebutton Current Page-->
+		<field name="plusone_current" type="radio" default="0"
+			label="CURRENTPLUSONE"
+      class="btn-group btn-group-yesno"
+			description="CURRENTPLUSONEDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="plusone_current_layout" type="radio" default="standard"
+			label="SIZE"
+			description="SIZEDESC">
+				<option value="small">OPT_SMALL</option>
+				<option value="medium">OPT_MEDIUM</option>
+				<option value="standard">OPT_STANDARD</option>
+				<option value="tall">OPT_TALL</option>
+		</field>
+		<field name="plusone_current_count" type="radio" default="fals"
+			label="PLUSONECOUNT"
+      class="btn-group btn-group-yesno"
+			description="PLUSONECOUNTDESC">
+				<option value="tru">OPT_YES</option>
+				<option value="fals">OPT_NO</option>
+		</field>
+  </fieldset>
+  <fieldset name="Twitter">
+		<field type="spacer" name="spacer77" hr="true" />
+		<field type="spacer" name="spacer7" label="&lt;b&gt;Tweetbutton&lt;/b&gt;" />
+	<!--Tweetbutton-->
+		<field name="tweet" type="radio" default="0"
+			label="TWEET"
+      class="btn-group btn-group-yesno"
+			description="TWEETDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="tweet_count" type="radio" default="vertical"
+			label="TWEETCOUNT"
+			description="TWEETCOUNTDESC">
+				<option value="none">OPT_NO</option>
+				<option value="vertical">OPT_VERTICAL</option>
+				<option value="horizontal">OPT_HORIZONTAL</option>
+		</field>
+		<field name="tweet_text" type="text" default=""
+			label="TWEETTEXT"
+			description="TWEETTEXTDESC" />
+		<field name="tweet_via" type="text" default=""
+			label="VIA"
+			description="VIADESC" />
+		<field type="spacer" name="spacer88" hr="true" />
+		<field type="spacer" name="spacer8" label="&lt;b&gt;Followbutton&lt;/b&gt;" />
+	<!--Followbutton-->
+		<field name="follow" type="radio" default="0"
+			label="FOLLOWBUTTON"
+      class="btn-group btn-group-yesno"
+			description="FOLLOWBUTTONDESC">
+				<option value="0">OPT_NO</option>
+				<option value="1">OPT_YES</option>
+		</field>
+		<field name="follow_count" type="radio" default="tru"
+			label="SHOWFOLLOWERS"
+      class="btn-group btn-group-yesno"
+			description="SHOWFOLLOWERSDESC">
+				<option value="fals">OPT_NO</option>
+				<option value="tru">OPT_YES</option>
+		</field>
+		<field name="follow_color" type="radio" default="blue"
+			label="BUTTONCOLOR"
+			description="BUTTONCOLORDESC">
+				<option value="blue">COLOR_BLUE</option>
+				<option value="grey">COLOR_GREY</option>
+		</field>
+		<field name="follow_account" type="text" default="your_twitter_account"
+			label="Follow @"
+			description="FOLLOWACCOUNTDESC" />
+    </fieldset>
+	</fields></config>
+</extension>

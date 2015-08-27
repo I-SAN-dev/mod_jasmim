@@ -1,0 +1,50 @@
+/**
+ * JASMIM Module Stylesheet
+ * @author I-SAN.de Webdesign und Hosting GbR
+ * @link http://i-san.de
+ * @license GNU/GPL
+ * mod_jasmim is free software. This version may have been modified pursuant
+ * to the GNU General Public License, and as distributed it includes or
+ * is derivative of works licensed under the GNU General Public License or
+ * other free or open source software licenses.
+ * Hints on the original author may NOT been removed!
+ */
+ 
+.jasmimButton {
+	float: left;
+	margin: 5px;
+	overflow: visible;
+}
+
+/* You can apply additional styling here to the buttons
+ * It is important for IE compatibility that plusone buttons are styled over css-class and not id
+ * (Leave as they are and just add the attributes you like)
+ */
+
+#like-homepage {
+
+}
+
+#like-current {
+
+}
+
+#like-fb {
+
+}
+
+.plusone-homepage {
+
+}
+
+.plusone-current {
+
+}
+
+#tweet {
+
+}
+
+#follow {
+
+}
